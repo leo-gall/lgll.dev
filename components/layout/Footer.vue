@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-white pt-10 border-white border-t flex flex-row justify-between"
+    class="text-white pt-10 border-white border-t flex flex-col lg:flex-row gap-6 lg:gap-0 justify-between"
   >
     <ul class="flex flex-col gap-3 prose-a:font-bold prose-a:underline">
       <div>

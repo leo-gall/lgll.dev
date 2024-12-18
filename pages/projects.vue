@@ -12,7 +12,7 @@
       <div
         v-for="(project, index) in projects"
         :key="index"
-        class="flex flex-row justify-between items-center"
+        class="flex flex-row-reverse lg:flex-row justify-between items-center"
       >
         <div class="flex flex-col gap-3">
           <p class="font-kranky text-4xl">{{ project.title }}</p>
@@ -26,7 +26,7 @@
           </div>
         </div>
         <NuxtLink :to="project.link" target="_blank">
-          <ExternalLink class="w-12 h-12" />
+          <ExternalLink class="w-8 lg:w-12 h-auto" />
         </NuxtLink>
       </div>
     </div>
