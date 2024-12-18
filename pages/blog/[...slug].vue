@@ -24,4 +24,8 @@ const slug = Array.isArray(slugParam) ? slugParam[0] : slugParam;
 const { data: blog } = await useAsyncData("home", () =>
   queryContent("/blog").where({ slug: slug }).findOne()
 );
+
+useHead({
+  title: blog?.value?.title ?? "Leo Gall - Blog",
+});
 </script>

@@ -8,9 +8,6 @@ export default defineNuxtConfig({
 
   components: ["~/components"],
 
-  image: {
-    dir: "assets/media",
-  },
   app: {
     head: {
       // Sets favicon (favicon.png)

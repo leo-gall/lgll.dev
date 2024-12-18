@@ -8,6 +8,7 @@ export default {
       fontFamily: {
         orbitron: ["Orbitron", "sans-serif"],
         funnel: ["FunnelSans", "sans-serif"],
+        kranky: ["Kranky", "sans-serif"],
       },
       colors: {
         sw: "#ffa500",

@@ -22,18 +22,18 @@
 }
 
 .gradient-1 {
-  @apply bg-gradient-to-r from-slate-800 via-black to-slate-800;
+  @apply bg-gradient-to-r from-orange-500 via-blue-500 to-green-500;
   animation: gradientWave1 14s ease infinite;
 }
 
 .gradient-2 {
-  @apply bg-gradient-to-b from-slate-800 via-black to-slate-800;
+  @apply bg-gradient-to-b from-yellow-500 via-indigo-500 to-pink-500;
   animation: gradientWave2 17s ease infinite;
   opacity: 0.7;
 }
 
 .gradient-3 {
-  @apply bg-gradient-to-tl from-slate-800 via-black to-slate-800;
+  @apply bg-gradient-to-tl from-red-500 via-teal-500 to-violet-600;
   animation: gradientWave3 19s ease infinite;
   opacity: 0.5;
 }

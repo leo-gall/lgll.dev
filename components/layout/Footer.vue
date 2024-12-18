@@ -2,7 +2,7 @@
   <div
     class="text-white pt-10 border-white border-t flex flex-row justify-between"
   >
-    <ul class="flex flex-col gap-3">
+    <ul class="flex flex-col gap-3 prose-a:font-bold prose-a:underline">
       <div>
         <li>Leo Gall</li>
         <li>Föhrenweg 21</li>
@@ -10,8 +10,10 @@
         <li>Bavaria, Germany</li>
       </div>
       <div>
-        <li>Mail: <a href="mailto:hi@lgll.dev">hi@lgll.dev</a></li>
-        <li>Phone: +49 170 591 5654</li>
+        <li>Mail: <NuxtLink to="mailto:hi@lgll.dev">hi@lgll.dev</NuxtLink></li>
+        <li>
+          Phone: <NuxtLink to="tel:+491705915654">+49 170 591 5654</NuxtLink>
+        </li>
       </div>
     </ul>
     <div class="flex flex-row gap-6">
@@ -46,7 +48,11 @@
           </g>
         </svg>
       </NuxtLink>
-      <NuxtLink to="https://github.com/leo-gall" target="_blank">
+      <NuxtLink
+        v-tooltip="`leogall`"
+        to="https://linkedin.com/in/leogall"
+        target="_blank"
+      >
         <svg
           width="30px"
           height="30px"
