@@ -3,24 +3,26 @@
     class="text-white pt-10 border-white border-t flex flex-col lg:flex-row gap-6 lg:gap-0 justify-between"
   >
     <ul class="flex flex-col gap-3 prose-a:font-bold prose-a:underline">
-      <div>
+      <ul>
         <li>Leo Gall</li>
         <li>Föhrenweg 21</li>
         <li>86926 Greifenberg</li>
         <li>Bavaria, Germany</li>
-      </div>
-      <div>
+      </ul>
+      <ul>
         <li>Mail: <NuxtLink to="mailto:hi@lgll.dev">hi@lgll.dev</NuxtLink></li>
         <li>
           Phone: <NuxtLink to="tel:+491705915654">+49 170 591 5654</NuxtLink>
         </li>
-      </div>
+      </ul>
     </ul>
     <div class="flex flex-row gap-6">
       <NuxtLink
         to="https://github.com/leo-gall"
         target="_blank"
         v-tooltip="`leo-gall`"
+        data-umami-event="social-redirect-github"
+        aria-label="go to Leo Gall's GitHub profile"
       >
         <svg
           width="30px"
@@ -52,6 +54,8 @@
         v-tooltip="`leogall`"
         to="https://linkedin.com/in/leogall"
         target="_blank"
+        data-umami-event="social-redirect-linkedin"
+        aria-label="go to Leo Gall's LinkedIn profile"
       >
         <svg
           width="30px"
@@ -78,6 +82,8 @@
         to="https://discord.com/users/809685585374740480"
         target="_blank"
         v-tooltip="`lglldev`"
+        data-umami-event="social-redirect-discord"
+        aria-label="go to Leo Gall's Discord profile"
       >
         <svg
           width="30px"

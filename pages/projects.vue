@@ -25,7 +25,11 @@
             </div>
           </div>
         </div>
-        <NuxtLink :to="project.link" target="_blank">
+        <NuxtLink
+          :to="project.link"
+          target="_blank"
+          :data-umami-event="`projects-redirect-${project.title.toLowerCase()}`"
+        >
           <ExternalLink class="w-8 lg:w-12 h-auto" />
         </NuxtLink>
       </div>

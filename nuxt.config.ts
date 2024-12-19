@@ -12,6 +12,16 @@ export default defineNuxtConfig({
     head: {
       // Sets favicon (favicon.png)
       link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
+      script: [
+        {
+          defer: true,
+          src: "https://cloud.umami.is/script.js",
+          "data-website-id": process.env.UMAMI_ID,
+        },
+      ],
+      htmlAttrs: {
+        lang: "en",
+      },
     },
   },
 });

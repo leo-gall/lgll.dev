@@ -18,7 +18,7 @@
 </template>
 
 <script lang="ts" setup>
-import { FileUser, Folder, House, NotebookPen } from "lucide-vue-next";
+import { Folder, House, NotebookPen } from "lucide-vue-next";
 
 const routes = [
   { to: "/", icon: House, tooltip: "Home" },

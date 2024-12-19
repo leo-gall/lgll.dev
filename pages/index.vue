@@ -15,12 +15,19 @@
           for almost 5 years now and I'm currently passionate about web
           development and design. I'm also interested in machine learning and
           AI. I'm employed (student job) at
-          <NuxtLink to="https://gutschik.de" target="_blank"
+          <NuxtLink
+            to="https://gutschik.de"
+            target="_blank"
+            data-umami-event="about-redirect-gutschik"
             >Gutschik Web Solutions</NuxtLink
           >
           as a Frontend Developer. In my free time I'm also working on
-          <NuxtLink to="//daytistics.com" target="_blank">Daytistics</NuxtLink>,
-          a web app that helps you to track and analyse your daily habits and
+          <NuxtLink
+            to="https://github.com/daytistics"
+            target="_blank"
+            data-umami-event="about-redirect-daytistics"
+            >Daytistics</NuxtLink
+          >, a web app that helps you to track and analyse your daily habits and
           routines.
 
           <br />
