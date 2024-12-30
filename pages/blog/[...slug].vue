@@ -2,7 +2,10 @@
   <div class="text-white">
     <div v-if="blog">
       <ContentRenderer :value="blog">
-        <ContentRendererMarkdown :value="blog" class="prose prose-invert" />
+        <ContentRendererMarkdown
+          :value="blog"
+          class="prose prose-invert !text-white !font-funnel"
+        />
       </ContentRenderer>
     </div>
     <div v-else class="prose prose-invert">
