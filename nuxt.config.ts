@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 
   css: ["./assets/css/tailwind.css"],
 
-  components: ["~/components"],
+  components: [{ path: "~/components", pathPrefix: false }],
 
   app: {
     head: {
