@@ -13,7 +13,7 @@
           v-for="(blog, index) in blogs"
           :key="index"
           :to="`/blog/${blog.slug}`"
-          class="bg-black/20 text-white p-6 rounded-lg w-full max-w-lg font-mono block"
+          class="bg-black/20 text-white p-6 rounded-lg w-full font-mono block"
         >
           <div v-if="blog && blog.title && blog.description">
             <div class="flex justify-between items-center">
