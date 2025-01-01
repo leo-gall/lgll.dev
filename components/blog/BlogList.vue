@@ -13,30 +13,17 @@
           v-for="(blog, index) in blogs"
           :key="index"
           :to="`/blog/${blog.slug}`"
-          class="bg-black/20 text-white p-6 rounded-lg w-full font-mono block"
+          class="bg-black/20 text-white p-6 rounded-lg w-full font-mono block hover:bg-gradient-to-tr hover:from-green-600 via-yellow-600 hover:to-blue-600 transition-all duration-100"
         >
           <div v-if="blog && blog.title && blog.description">
-            <div class="flex justify-between items-center">
-              <p class="text-sm">
-                {{ blog.date }}
-              </p>
-              <p class="text-sm">zsh</p>
-            </div>
-            <div class="mt-4">
-              <p class="font-bold text-white">
-                <span class="text-green-500">➜ </span>
-                <span class="text-sky-600">lgll.dev</span>
-                <span class="text-purple-700"> git:(</span>
-                <span class="text-red-500">main</span>
-                <span class="text-purple-700">)</span>
-                <span class="text-yellow-600"> ✗ </span>
-                echo
-                <span class="font-bold">${{ EnvVar(blog.title) }}</span>
-              </p>
-              <br />
-              <p>
-                {{ blog.description }}
-              </p>
+            <h2 class="text-2xl font-bold">{{ blog.title }}</h2>
+            <p class="mt-2">{{ blog.description }}</p>
+            <div class="flex flex-row gap-3 mt-3">
+              <div
+                class="font-funnel text-md bg-gray-900/20 px-3 py-1 rounded-full"
+              >
+                {{ new Date(blog.updatedAt).toLocaleDateString() }}
+              </div>
             </div>
           </div>
         </NuxtLink>
@@ -52,7 +39,4 @@
 const { data: blogs } = await useAsyncData("home", () =>
   queryContent("/blog").sort({ date: -1 }).find()
 );
-
-const EnvVar = (str: string) =>
-  str.toUpperCase().replace(/ /g, "_").replace(/-/g, "_").replace(/,/g, "");
 </script>
