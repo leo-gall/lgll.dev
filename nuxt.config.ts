@@ -24,4 +24,11 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  content: {
+    highlight: {
+      theme: "one-dark-pro",
+      langs: ["dart", "yaml"],
+    },
+  },
 });
