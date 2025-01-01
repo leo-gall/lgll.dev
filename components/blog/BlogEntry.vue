@@ -7,10 +7,33 @@
             class="inline-flex flex-row items-center gap-2 mb-5 border-b-2 border-white pb-2 pr-2"
             to="/blog"
           >
-            <ArrowLeft class="w-6 h-6" />
+            <ArrowLeftIcon class="w-6 h-6" />
             <span> All Blogs </span>
           </NuxtLink>
-          <h1 class="text-4xl font-bold">
+
+          <div class="flex flex-col gap-3 mb-3">
+            <div
+              v-if="isOutdated"
+              class="bg-red-600/50 flex flex-row rounded-xl max-w-xl p-4 items-center gap-3"
+            >
+              <OctagonAlertIcon class="font-bold uppercase" />
+              <span>
+                This post hasn't been updated for more than a year and could be
+                outdated!
+              </span>
+            </div>
+            <div
+              v-if="!blog.done"
+              class="bg-orange-600/50 flex flex-row rounded-xl max-w-xl p-4 items-center gap-3"
+            >
+              <PickaxeIcon class="font-bold uppercase" />
+              <span>
+                This post is a work in progress and could be incomplete!
+              </span>
+            </div>
+          </div>
+
+          <h1 class="text-4xl font-bold max-w-xl">
             {{ blog.title }}
           </h1>
           <p v-if="blog.updatedAt" class="mt-2">
@@ -41,7 +64,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ArrowLeft } from "lucide-vue-next";
+import { ArrowLeftIcon, OctagonAlertIcon, PickaxeIcon } from "lucide-vue-next";
 
 const slugParam = useRoute().params.slug;
 const slug = Array.isArray(slugParam) ? slugParam[0] : slugParam;
@@ -84,6 +107,15 @@ const readingTime = computed(() => {
   const content = extractText(blog.value?.body?.children ?? []);
   const textLength = content.split(" ").length;
   return Math.ceil(textLength / wordsPerMinute);
+});
+
+const isOutdated = computed(() => {
+  if (!blog.value?.updatedAt) return false;
+  const updatedAt = new Date(blog.value.updatedAt);
+  const now = new Date();
+  const diff = now.getTime() - updatedAt.getTime();
+  const days = diff / (1000 * 60 * 60 * 24);
+  return days > 365;
 });
 
 useHead({

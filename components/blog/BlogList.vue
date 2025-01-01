@@ -37,6 +37,6 @@
 
 <script lang="ts" setup>
 const { data: blogs } = await useAsyncData("home", () =>
-  queryContent("/blog").sort({ date: -1 }).find()
+  queryContent("/blog").sort({ updatedAt: -1 }).find()
 );
 </script>
