@@ -12,25 +12,13 @@
           </NuxtLink>
 
           <div class="flex flex-col gap-3 mb-3">
-            <div
-              v-if="isOutdated"
-              class="bg-red-600/50 flex flex-row rounded-xl max-w-xl p-4 items-center gap-3"
-            >
-              <OctagonAlertIcon class="font-bold uppercase" />
-              <span>
-                This post hasn't been updated for more than a year and could be
-                outdated!
-              </span>
-            </div>
-            <div
-              v-if="!blog.done"
-              class="bg-orange-600/50 flex flex-row rounded-xl max-w-xl p-4 items-center gap-3"
-            >
-              <PickaxeIcon class="font-bold uppercase" />
-              <span>
-                This post is a work in progress and could be incomplete!
-              </span>
-            </div>
+            <Alert v-if="isOutdated" type="warning">
+              This post hasn't been updated for more than a year and could be
+              outdated!
+            </Alert>
+            <Alert v-if="!blog.done" type="warning">
+              This post is a work in progress and could be incomplete!
+            </Alert>
           </div>
 
           <h1 class="text-4xl font-bold max-w-xl">
