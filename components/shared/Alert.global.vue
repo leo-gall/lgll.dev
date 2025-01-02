@@ -8,7 +8,7 @@
     <component
       :is="alertIcon"
       class="font-bold uppercase"
-      style="width: 200px; height: auto"
+      style="min-width: 50px; max-width: 50px"
     />
 
     <slot />
@@ -30,7 +30,7 @@ const props = defineProps<{
 const alertTypeClass = computed(() => {
   switch (props.type) {
     case "info":
-      return "bg-blue-600/50";
+      return "bg-blue-500/50";
     case "warning":
       return "bg-yellow-600/50";
     case "success":
@@ -38,7 +38,7 @@ const alertTypeClass = computed(() => {
     case "error":
       return "bg-red-600/50";
     default:
-      return "bg-blue-600/50";
+      return "bg-blue-500/50";
   }
 });
 
