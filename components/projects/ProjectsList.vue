@@ -43,8 +43,8 @@ import { ExternalLink } from "lucide-vue-next";
 const projects = ref([
   {
     title: "Daytistics",
-    link: "https://github.com/daytistics/daytistics",
-    tags: ["Dart", "Flutter", "Supabase"],
+    link: "https://daytistics.com/",
+    tags: ["Dart", "Flutter", "Firebase"],
   },
   {
     title: "Ottilianer",
