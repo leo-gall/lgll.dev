@@ -1,6 +1,6 @@
 ---
 title: Bye, Bye 2024
-updatedAt: 2024-12-19
+updatedAt: 2024-12-31
 done: true
 description: "Looking back at my journey through 2024 and sharing my plans for the upcoming year."
 

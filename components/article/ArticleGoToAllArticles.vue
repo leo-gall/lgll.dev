@@ -1,9 +1,13 @@
 <template>
-  <BlogList />
+  <div>
+    
+  </div>
 </template>
 
 <script lang="ts" setup>
-useHead({
-  title: "Leo Gall ・ Blog",
-});
+
 </script>
+
+<style>
+
+</style>

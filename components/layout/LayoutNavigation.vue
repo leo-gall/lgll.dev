@@ -23,7 +23,7 @@ import { Folder, House, NotebookPen } from "lucide-vue-next";
 const routes = [
   { to: "/", icon: House, tooltip: "Home" },
   { to: "/projects", icon: Folder, tooltip: "Projects" },
-  { to: "/blog", icon: NotebookPen, tooltip: "Blog" },
+  { to: "/articles", icon: NotebookPen, tooltip: "Articles" },
 ];
 
 const colorClasses = [

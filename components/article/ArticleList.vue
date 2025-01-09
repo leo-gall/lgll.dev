@@ -1,0 +1,76 @@
+<template>
+  <div>
+    <div class="flex flex-col gap-10 text-white">
+      <div>
+        <h1 class="text-5xl mb-3 font-bold font-kranky">Articles</h1>
+        <p class="max-w-[40rem] text-xl my-1 font-funnel">
+          I love sharing knowledge and experiences! Here, you'll find all my
+          blog posts and practical guides to help you on your coding journey.
+        </p>
+      </div>
+      <div v-if="(articles ?? []).length > 0" class="flex flex-col gap-10">
+        <NuxtLink
+          v-for="(article, _) in articles"
+          :to="`/articles/${article.slug}`"
+          class="bg-black/20 text-white p-6 font-mono block max-w-2xl hover:scale-105 transition-all duration-200"
+        >
+          <div v-if="article && article.title && article.description">
+            <span
+              class="font-funnel text-md bg-gray-900/20 px-3 py-1 rounded-full mb-3 inline-block"
+            >
+              {{ new Date(article.updatedAt).toLocaleDateString() }}
+            </span>
+            <span
+              v-if="isCollectionArticle(article)"
+              class="font-funnel text-md bg-gray-900/20 px-3 py-1 rounded-full mb-3 inline-block ml-2"
+            >
+              Collection
+            </span>
+
+            <h2 class="text-2xl font-bold">{{ article.title }}</h2>
+            <p class="mt-2">{{ article.description }}</p>
+            <SubArticleList
+              v-if="isCollectionArticle(article)"
+              :articles="getChildrenArticles(article) ?? []"
+            />
+          </div>
+        </NuxtLink>
+      </div>
+      <div v-else>
+        <p class="text-white">No article found.</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import type { ParsedContent } from "@nuxt/content";
+
+const { data: articles } = await useAsyncData("articles", () =>
+  queryContent("/articles")
+    .sort({ updatedAt: -1 })
+    .where({
+      childOf: { $exists: false },
+    })
+    .find()
+);
+
+const { data: childrenArticles } = await useAsyncData("childrenArticles", () =>
+  queryContent("/articles")
+    .sort({ updatedAt: -1 })
+    .where({
+      childOf: { $exists: true },
+    })
+    .find()
+);
+
+function isCollectionArticle(article: any) {
+  return article.collectionArticle == true;
+}
+
+function getChildrenArticles(article: ParsedContent) {
+  return childrenArticles.value?.filter(
+    (c: ParsedContent) => c.childOf == article.slug
+  );
+}
+</script>

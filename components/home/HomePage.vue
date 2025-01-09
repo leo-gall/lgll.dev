@@ -13,28 +13,21 @@
         >
           I'm a 16 year old student and developer from Germany. I've been coding
           for almost 5 years now and I'm currently passionate about web
-          development and design. I'm also interested in machine learning and
-          AI. I'm employed (student job) at
+          development, app development and design. I'm employed (student job) at
           <NuxtLink
-            to="https://gutschik.de"
+            to="https://kickserve.de"
             target="_blank"
             data-umami-event="about-redirect-gutschik"
-            >Gutschik Web Solutions</NuxtLink
+            >KickServe GmbH</NuxtLink
           >
-          as a Frontend Developer. In my free time I'm also working on
+          as a Web Developer. In my free time I'm also working on
           <NuxtLink
-            to="https://github.com/daytistics"
+            to="https://daytistics.com"
             target="_blank"
             data-umami-event="about-redirect-daytistics"
             >Daytistics</NuxtLink
           >, a mobile app that helps you to track and analyse your daily habits
           and routines.
-
-          <br />
-          <br />
-
-          Feel free to contact me if you have any questions or if you want to
-          work with me. I'm always open for new projects and collaborations.
         </p>
       </div>
     </div>

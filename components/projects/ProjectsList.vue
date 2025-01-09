@@ -29,6 +29,7 @@
           :to="project.link"
           target="_blank"
           :data-umami-event="`projects-redirect-${project.title.toLowerCase()}`"
+          class="hover:scale-110 transition-transform duration-200"
         >
           <ExternalLink class="w-8 lg:w-12 h-auto" />
         </NuxtLink>
@@ -44,7 +45,7 @@ const projects = ref([
   {
     title: "Daytistics",
     link: "https://daytistics.com/",
-    tags: ["Dart", "Flutter", "Firebase"],
+    tags: ["Dart", "Flutter", "Supabase"],
   },
   {
     title: "Ottilianer",
