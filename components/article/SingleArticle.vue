@@ -30,7 +30,7 @@
           </span>
           <span v-if="article.updatedAt"> ・ </span>
           <span>
-            {{ calculateReadingTime(article.value?.body?.children) }} min read
+            {{ calculateReadingTime(article.body?.children ?? []) }} min read
           </span>
         </p>
       </div>
