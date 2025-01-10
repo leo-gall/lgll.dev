@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white max-w-[22rem]">
+  <div class="text-white max-w-[20rem] md:max-w-lg lg:max-w-full">
     <ContentRenderer :value="article">
       <div class="mb-5">
         <NuxtLink
