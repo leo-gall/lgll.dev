@@ -13,7 +13,7 @@ The year 2024 comes to an end. For me, this year was filled with awesome experie
 
 At first, let's take a look at my commit history from the past year.
 
-<img src="/media/articles   /bye-bye-2024/commit-history.png" width="1000px" />
+<img src="/media/articles/bye-bye-2024/commit-history.png" width="1000px" />
 
 As you can see, according to GitHub, I did not code much in the first half of the year. But in fact, GitHub is wrong, because at this time, I didn't know how to use GitHub. However, during this time I have been heavily involved in game development in Unity, but so little of it has stuck that this blog post will ignore this phase.
 

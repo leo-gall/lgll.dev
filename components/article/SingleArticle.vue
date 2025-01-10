@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white">
+  <div class="text-white max-w-[22rem]">
     <ContentRenderer :value="article">
       <div class="mb-5">
         <NuxtLink
@@ -20,7 +20,7 @@
           </Alert>
         </div>
 
-        <h1 class="text-4xl font-bold max-w-xl">
+        <h1 class="text-4xl font-bold max-w-xl font-kranky">
           {{ article.title }}
         </h1>
         <p v-if="article.updatedAt" class="mt-2">

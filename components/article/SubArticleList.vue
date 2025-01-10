@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="grid grid-cols-2 gap-2 mt-10">
+    <div class="grid md:grid-cols-2 gap-2 mt-10">
       <div
         v-for="article in articles.slice(0, 6)"
         class="bg-gray-900/20 gap-1 p-2 rounded-md"
