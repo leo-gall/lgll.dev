@@ -26,6 +26,12 @@
             >
               Collection
             </span>
+            <span
+              v-if="article.llmContent"
+              class="font-funnel text-md bg-gray-900/20 px-3 py-1 rounded-full mb-3 inline-block ml-2"
+            >
+              Contains generated content
+            </span>
 
             <h2 class="text-2xl font-bold">{{ article.title }}</h2>
             <p class="mt-2">{{ article.description }}</p>
