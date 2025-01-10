@@ -2,7 +2,7 @@
 title: Bye, Bye 2024
 updatedAt: 2024-12-31
 done: true
-description: "Looking back at my journey through 2024 and sharing my plans for the upcoming year."
+description: "The year 2024 comes to an end. For me, this year was filled with awesome experiences and countless learnings. In this blog post, I want to look back at what I've reached in 2024. I also want to give a quick overview of what I want to achieve in 2025."
 
 slug: bye-bye-2024
 ---
