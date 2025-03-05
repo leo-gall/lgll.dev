@@ -62,6 +62,7 @@ const { data: articles } = await useAsyncData("articles", () =>
     .sort({ updatedAt: -1 })
     .where({
       childOf: { $exists: false },
+      hidden: { $ne: true },
     })
     .find()
 );
